@@ -1,7 +1,7 @@
-Species_below <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Species_Freq_Below.xlsx")
-Species_above <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Species_Freq_Above.xlsx")
-Species_below_family <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Family_Freq_Below.xlsx")
-Species_above_family <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Family_Freq_Above.xlsx")
+Species_below <- read_excel("Eco_Project\\Processed_data\\Species_Freq_Below.xlsx")
+Species_above <- read_excel("Eco_Project\\Processed_data\\Species_Freq_Above.xlsx")
+Species_below_family <- read_excel("Eco_Project\\Processed_data\\Family_Freq_Below.xlsx")
+Species_above_family <-read_excel("Eco_Project\\Processed_data\\Family_Freq_Above.xlsx")
 
 
 similar <- semi_join(Species_below,Species_above, by="Species")
@@ -28,6 +28,6 @@ print(sorenson_CS)
 print(Jaccard_family)
 print(sorenson_CS_family)
 
-write.xlsx(in_below_not_above_family,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Family_below_not_above.xlsx")
+write.xlsx(in_below_not_above_family,"Eco_Project\\Processed_data\\Family_below_not_above.xlsx")
 
 
