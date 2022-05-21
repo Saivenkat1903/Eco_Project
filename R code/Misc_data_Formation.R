@@ -16,8 +16,8 @@ for (i in similar_1$Family){
 }         
 
 #randomization
-random1 <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Below(Families).xlsx")
-random1 <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Above(Families).xlsx")
+random1 <-read_excel("Eco_Project\\Processed_data\\Total_Observations_Below(Families).xlsx")
+random1 <-read_excel("Eco_Project\\Processed_data\\Total_Observations_Above(Families).xlsx")
 
 set.seed(42)
 
@@ -54,13 +54,13 @@ Chart_above[nrow(Chart_above),1]=length(random1$Family)
 ggplot(data=Chart_above,mapping=aes(x=x_axis_above,y=No_of_species_above))+geom_point()+geom_smooth()+xlab("No. of observations")+ylab("No. of Families")+ggtitle("Randomized Families accumulation above 100m")
 
 
-write.xlsx(Chart_above,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Randomized_Family_Accumulation_Above.xlsx")
+write.xlsx(Chart_above,"Eco_Project\\Processed_data\\Randomized_Family_Accumulation_Above.xlsx")
 
 
 
 
 #Rank abundance curves
-data <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Species_Freq_Above.xlsx")
+data <- read_excel("Eco_Project\\Processed_data\\Species_Freq_Above.xlsx")
 
 data <- data[order(data$Freq,decreasing=TRUE),]
 
@@ -106,20 +106,9 @@ ggplot()+geom_line(data = main, aes(x = alt, y = shanon_family, colour = "Shanon
   scale_colour_manual(name = "Legend",values = c( "Shanon Diversity Index" = "Green", "Simpson Diversity Index" = "Blue"))+
   theme(legend.position="bottom")
 
-
-#making pretty tables
-data <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\random.xlsx")
-
-
-tab <- data.table(data)
-
-formattable(tab)
-
-
-
 #Rank abundance for all
-data1 <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Above(Families).xlsx")
-data2 <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Below(Families).xlsx")
+data1 <-read_excel("Eco_Project\\Processed_data\\Total_Observations_Above(Families).xlsx")
+data2 <-read_excel("Eco_Project\\Processed_data\\Total_Observations_Below(Families).xlsx")
 
 main <- rbind(data1,data2)
 
