@@ -1,60 +1,60 @@
 #subgroup calculations
 
 #below 100m data upload
-Eco_Sai <- read.csv("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Sai.csv")
-Eco_Rushdra <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Rushdra.xlsx")
-Eco_Mukesh <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Mukesh.xlsx")
-Eco_Sabdhayani <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Sabdhayani.xlsx")
-Eco_Bhavana <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Bhavana.xlsx")
-Eco_Adhina <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Adhina.xlsx")
-Eco_RC <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_RC.xlsx")
-Eco_Shashank <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Shashank.xlsx")
+Eco_14m <- read.csv("Eco_Project\\Original_data\\Eco_Data_14m.csv")
+Eco_38m <-read_excel("Eco_Project\\Original_data\\Eco_Data_38m.xlsx")
+Eco_16m <-read_excel("Eco_Project\\Original_data\\Eco_Data_16m.xlsx")
+Eco_52m <-read_excel("Eco_Project\\Original_data\\Eco_Data_52m.xlsx")
+Eco_37m <- read_excel("Eco_Project\\Original_data\\Eco_Data_37m.xlsx")
+Eco_30m <- read_excel("Eco_Project\\Original_data\\Eco_Data_30m.xlsx")
+Eco_21m <- read_excel("Eco_Project\\Original_data\\Eco_Data_21m.xlsx")
+Eco_16m1 <- read_excel("Eco_Project\\Original_data\\Eco_Data_16m1.xlsx")
 
 
 Master_data <-data.frame(matrix(nrow=0,ncol=1))
 colnames(Master_data) <- c("Species")
 
-for (i in Eco_Sai$scientific_name){
+for (i in Eco_14m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Rushdra$scientific_name){
+for (i in Eco_38m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Mukesh_Clean$scientific_name){
+for (i in Eco_16m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Shashank_Clean$scientific_name){
+for (i in Eco_16m1$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Sabdhayani$scientific_name){
+for (i in Eco_52m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Bhavana$scientific_name){
+for (i in Eco_37m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_Adhina$scientific_name){
+for (i in Eco_30m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-for (i in Eco_RC$scientific_name){
+for (i in Eco_21m$scientific_name){
   Master_data <- rbind(Master_data,i)
   rm(i)
 }
 
-write.xlsx(Master_data,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Below.xlsx")
+write.xlsx(Master_data,"Eco_Project\\Processed_data\\Total_Observations_Below.xlsx")
 
 
 #Species accumulation below 100m
@@ -88,48 +88,48 @@ ggplot(data=Chart_below,mapping=aes(x=x_axis_below,y=No_of_species_below))+geom_
 
 
 #Above 100m data upload
-Eco_Srivani <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Srivani.xlsx")
-Eco_Manasa <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Manasa.xlsx")
-Eco_Raja <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Raja.xlsx")
-Eco_Revanth <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Revanth.xlsx")
-Eco_Meen <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Meenakshi.xlsx")
-Eco_Madhu <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Madhu.xlsx")
+Eco_240m <-read_excel("Eco_Project\\Original_data\\Eco_Data_240m.xlsx")
+Eco_457m <- read_excel("Eco_Project\\Original_data\\Eco_Data_457m.xlsx")
+Eco_131m <- read_excel("Eco_Project\\Original_data\\Eco_Data_131m.xlsx")
+Eco_498m <- read_excel("Eco_Project\\Original_data\\Eco_Data_498m.xlsx")
+Eco_884m <-read_excel("Eco_Project\\Original_data\\Eco_Data_884m.xlsx")
+Eco_611m <-read_excel("Eco_Project\\Original_data\\Eco_Data_611m.xlsx")
 
 
 Master_data_above <-data.frame(matrix(nrow=0,ncol=1))
 colnames(Master_data_above) <- c("Species")
 
-for (i in Eco_Srivani$scientific_name){
+for (i in Eco_240m$scientific_name){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-for (i in Eco_Manasa$`Species name`){
+for (i in Eco_457m$Species name`){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-for (i in Eco_Raja$scientific_name){
+for (i in Eco_131m$scientific_name){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-for (i in Eco_Revanth$scientific_name){
+for (i in Eco_498m$scientific_name){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-for (i in Eco_Meen$scientific_name){
+for (i in Eco_884m$scientific_name){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-for (i in Eco_Madhu$scientific_name){
+for (i in Eco_611m$scientific_name){
   Master_data_above <- rbind(Master_data_above,i)
   rm(i)
 }
 
-write.xlsx(Master_data_above,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Above.xlsx")
+write.xlsx(Master_data_above,"Eco_Project\\Processed_data\\Total_Observations_Above.xlsx")
 
 
 #Species accumulation above 100m
@@ -162,8 +162,8 @@ ggplot(data=Chart_above,mapping=aes(x=x_axis_above,y=No_of_species_above))+geom_
 
 
 #for all data
-data1 <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Below(Families).xlsx")
-data2 <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Above(Families).xlsx")
+data1 <- read_excel("Eco_Project\\Processed_data\\Total_Observations_Below(Families).xlsx")
+data2 <- read_excel("Eco_Project\\Processed_data\\Total_Observations_Above(Families).xlsx")
 
 Main <- rbind(data1,data2)
 set.seed(42)
@@ -202,7 +202,7 @@ Chart_above[nrow(Chart_above),1]=length(Main$Family)
 
 ggplot(data=Chart_above,mapping=aes(x=x_axis_above,y=No_of_species_above))+geom_point()+geom_smooth()+xlab("No. of observations")+ylab("No. of families")+ggtitle("Family accumulation curve for all data")
 
-write.xlsx(Chart_above,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\All_data_Family_Accumulation.xlsx")
+write.xlsx(Chart_above,"Eco_Project\\Processed_data\\All_data_Family_Accumulation.xlsx")
 
 
 
