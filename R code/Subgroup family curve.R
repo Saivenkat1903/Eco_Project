@@ -1,60 +1,60 @@
 #subgroup calculations
 
 #below 100m data upload
-Eco_Sai <- read.csv("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Sai.csv")
-Eco_Rushdra <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Rushdra.xlsx")
-Eco_Mukesh <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Mukesh.xlsx")
-Eco_Sabdhayani <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Sabdhayani.xlsx")
-Eco_Bhavana <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Bhavana.xlsx")
-Eco_Adhina <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Adhina.xlsx")
-Eco_RC <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_RC.xlsx")
-Eco_Shashank <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Shashank.xlsx")
+Eco_14m <- read.csv("Eco_Project\\Original_data\\Eco_Data_14m.csv")
+Eco_38m <-read_excel("Eco_Project\\Original_data\\Eco_Data_38m.xlsx")
+Eco_16m <-read_excel("Eco_Project\\Original_data\\Eco_Data_16m.xlsx")
+Eco_52m <-read_excel("Eco_Project\\Original_data\\Eco_Data_52m.xlsx")
+Eco_37m <- read_excel("Eco_Project\\Original_data\\Eco_Data_37m.xlsx")
+Eco_30m <- read_excel("Eco_Project\\Original_data\\Eco_Data_30m.xlsx")
+Eco_21m <- read_excel("Eco_Project\\Original_data\\Eco_Data_21m.xlsx")
+Eco_16m1 <- read_excel("Eco_Project\\Original_data\\Eco_Data_16m1.xlsx")
 
 
 Master_data_family <-data.frame(matrix(nrow=0,ncol=1))
 colnames(Master_data_family) <- c("Family")
 
-for (i in Eco_Sai$taxon_family_name){
+for (i in Eco_14m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Rushdra$taxon_family_name){
+for (i in Eco_38m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Mukesh_Clean$taxon_family_name){
+for (i in Eco_16m_Clean$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Shashank_Clean$taxon_family_name){
+for (i in Eco_16m1_Clean$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Sabdhayani$taxon_family_name){
+for (i in Eco_52m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Bhavana$taxon_family_name){
+for (i in Eco_37m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_Adhina$taxon_family_name){
+for (i in Eco_30m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-for (i in Eco_RC$taxon_family_name){
+for (i in Eco_21m$taxon_family_name){
   Master_data_family <- rbind(Master_data_family,i)
   rm(i)
 }
 
-write.xlsx(Master_data_family,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Below(Families).xlsx")
+write.xlsx(Master_data_family,"Eco_Project\\Processed_data\\Total_Observations_Below(Families).xlsx")
 
 
 
@@ -89,48 +89,48 @@ ggplot(data=Chart_below_family,mapping=aes(x=x_axis_below_family,y=No_of_species
 
 
 #Above 100m data upload
-Eco_Srivani <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Srivani.xlsx")
-Eco_Manasa <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Manasa.xlsx")
-Eco_Raja <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Raja.xlsx")
-Eco_Revanth <- read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Revanth.xlsx")
-Eco_Meen <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Meenakshi.xlsx")
-Eco_Madhu <-read_excel("D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Eco_Data_Madhu.xlsx")
+Eco_240m <-read_excel("Eco_Project\\Original_data\\Eco_Data_240m.xlsx")
+Eco_457m <- read_excel("Eco_Project\\Original_data\\Eco_Data_457m.xlsx")
+Eco_131m <- read_excel("Eco_Project\\Original_data\\Eco_Data_131m.xlsx")
+Eco_498m <- read_excel("Eco_Project\\Original_data\\Eco_Data_498m.xlsx")
+Eco_884m <-read_excel("Eco_Project\\Original_data\\Eco_Data_884m.xlsx")
+Eco_611m <-read_excel("Eco_Project\\Original_data\\Eco_Data_611m.xlsx")
 
 
 Master_data_above_family <-data.frame(matrix(nrow=0,ncol=1))
 colnames(Master_data_above_family) <- c("Family")
 
-for (i in Eco_Srivani$taxon_family_name){
+for (i in Eco_240m$taxon_family_name){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-for (i in Eco_Manasa$Family){
+for (i in Eco_457m$Family){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-for (i in Eco_Raja$taxon_family_name){
+for (i in Eco_131m$taxon_family_name){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-for (i in Eco_Revanth$taxon_family_name){
+for (i in Eco_498m$taxon_family_name){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-for (i in Eco_Meen$taxon_family_name){
+for (i in Eco_884m$taxon_family_name){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-for (i in Eco_Madhu$taxon_family_name){
+for (i in Eco_611m$taxon_family_name){
   Master_data_above_family <- rbind(Master_data_above_family,i)
   rm(i)
 }
 
-write.xlsx(Master_data_above_family,"D:\\Saivenkat\\College shizzle dizzle\\Semester 3\\BIO211\\Total_Observations_Above(Families).xlsx")
+write.xlsx(Master_data_above_family,"Eco_Project\\Processed_data\\Total_Observations_Above(Families).xlsx")
 
 
 #Species accumulation above 100m
@@ -162,7 +162,7 @@ Chart_above_family[nrow(Chart_above_family),1]=length(Master_data_above_family$F
 ggplot(data=Chart_above_family,mapping=aes(x=x_axis_above_family,y=No_of_species_above_family))+geom_point()+geom_smooth()+xlab("No. of observations")+ylab("No. of species")+ggtitle("Families accumulation curve for above 100m")
 
 
-
+write.xlsx(Master_data_above_family,"Eco_Project\\Processed_data\\Total_Observations_Above(Species).xlsx")
 
 
 
